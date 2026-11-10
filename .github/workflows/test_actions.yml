@@ -1,0 +1,10 @@
+name:  Actions Demo
+run-name: ${{github.actor}} is testing github actions
+on: [push]
+jobs:
+    Explore-Github-Actions:
+        runs-on: ubuntu-latest
+        steps:
+            - run: python -m pip install --upgrade pip
+            - run: pip install flake8 nose
+            - run: nosetests 
